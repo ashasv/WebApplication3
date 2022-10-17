@@ -27,8 +27,8 @@ namespace WebApplication3
             {
                 selectQuery qs = new selectQuery();
                 List<string> datas = qs.SelectIUP(LoginName, LoginPwd);
-                for (int i = 0; i < datas.Count; i++)
-                {
+                if (datas.Count == 3)
+                    {
                     id = datas[0];
                     userName = datas[1];
                     userPWd = datas[2];

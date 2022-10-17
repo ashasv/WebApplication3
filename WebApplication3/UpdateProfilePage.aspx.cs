@@ -80,7 +80,7 @@ namespace WebApplication3
                 int check = cmd.ExecuteNonQuery();
                 selectQuery qs = new selectQuery();
                 List<string> data = qs.SelectAll(id);
-                for (int i = 0; i < data.Count; i++)
+                if (data.Count == 6)
                 {
                     LName.Text = data[0];
                     psw.Text = data[1];
@@ -118,7 +118,7 @@ namespace WebApplication3
                 selectQuery qs = new selectQuery();
                 List<string> data = qs.SelectAll(id);
 
-                for (int i = 0; i < data.Count; i++)
+                if (data.Count == 6)
                 {
                     LName.Text = data[0];
                     psw.Text = data[1];

@@ -71,6 +71,7 @@ namespace WebApplication3
                 using (DataTable dt = new DataTable())
                 {
                     sda.Fill(dt);
+                    con.Close();
                     return dt;
                 }
             }
